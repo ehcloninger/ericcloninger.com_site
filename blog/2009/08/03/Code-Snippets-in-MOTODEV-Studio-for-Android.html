@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Code Snippets in MOTODEV Studio for Android - Eric Cloninger
+    
+  </title>
+
+  <meta name="description" content="Application development, whether for desktop or mobile, is 10% inspiration and 90% perspiration. MOTODEV Studio for Android has features that shift the ratio...">
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/blog/2009/08/03/Code-Snippets-in-MOTODEV-Studio-for-Android.html">
+  <link rel="alternate" type="application/rss+xml" title="Eric Cloninger" href="/feed.xml">
+  <script src="https://kit.fontawesome.com/9c639a3d5e.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">Eric Cloninger</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/portfolio">Portfolio</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+  <header class="masthead">
+    
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Code Snippets in MOTODEV Studio for Android</h1>
+            
+            <span class="meta">Posted by
+              <a href="#">Eric Cloninger</a>
+              on August 03, 2009 &middot; <span class="reading-time" title="Estimated read time">
+  
+   5 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <p class="boxed">
+      		<strong>NOTE: </strong>This blog post was originally hosted on Motorola's MOTODEV web site. That site was decommissioned in 2012. I've made every attempt to preserve blog posts and accompanying forum posts with their original content. Many web links are no longer valid, so they have been removed and replaced with <em>emphasized</em> text.
+      	</p>
+      	<p>
+      		<strong>by Eric Cloninger (EricC)</strong>
+      	</p>
+
+        			<p>
+				Application development, whether for desktop or mobile, is 10% inspiration and 90% perspiration. MOTODEV Studio for Android has features that shift the ratio in favor of inspiration.
+			</p>
+			<p>
+				Code Snippets is one such feature, and it's available in the lower left corner of the MOTODEV Studio perspective. When you launch MOTODEV Studio, you should see this perspective, but if not, it is accessible from the Window-&gt;Open Perspective menu. Code Snippets are often-used code, made available in template form, for you to drag and drop into your source files. By using common and proven code for your work instead of entering the same sequences each time, you will achieve more stable and better performing applications.
+			</p>
+			<p>
+				One place where snippets can be useful is in the onCreate() method. In onCreate(), you find yourself doing the same things over and over. For example, you might wish to retrieve the shared preferences for your application. Using the Snippets view, either drag the words Retrieve shared preferences from Snippets into an opened source file, or double click on the item in the Snippets view and the code is entered at the cursor. Voil&#224;, it's that easy!
+			</p>
+			<p>
+				<img style="margin:0 10px 10px 10px;" src="/assets/images//blog/2009/08/03/Code-Snippets-in-MOTODEV-Studio-for-Android/3787036964_b283ae92c1.jpg" alt="Code Snippets in MOTODEV Studio for Android" >
+			</p>
+			<p>
+				Code snippets are just pieces of code and not a full application, so you will often need to replace default values or include other necessary packages. In the case of the example shown in the screenshot, you would need to import android.content.SharedPreferences before the code will compile. Most of the errors you will encounter from using snippets can be resolved by replacing default values (often in UPPERCASE) or using the QuickFix tool (Ctrl+1) to let the IDE fix them.
+			</p>
+			<p>
+				<strong>
+					Express Yourself!
+				</strong>
+			</p>
+			<p>
+				Do you have a bit of code that you use over and over? Of course you do. You can add your own bits of code to the Code Snippets View and share with your friends, co-workers and those guys on the discussion boards. <br>
+			</p>
+			<p>
+				<img style="margin:0 10px 10px 10px;" src="/assets/images//blog/2009/08/03/Code-Snippets-in-MOTODEV-Studio-for-Android/3787036994_4e90a11e67.jpg" alt="Code Snippets in MOTODEV Studio for Android" >
+			</p>
+			<p>
+				To create your own snippets, start by clicking in the middle of the Snippets view and choose "Customize". This will bring up a dialog where you can manage the existing snippets as well as adding your own categories and new items to your categories.
+			</p>
+			<p>
+				You cannot modify the categories or snippets that ship with MOTODEV Studio, but you can create your own categories and snippets within those categories. As you can see in the screenshot below, I've created a new category called "Eric's Snippets" by right-clicking in the snippet list and choosing "New-&gt;New Category".
+			</p>
+			<p>
+				<img style="margin:0 10px 10px 10px;" src="/assets/images//blog/2009/08/03/Code-Snippets-in-MOTODEV-Studio-for-Android/3787037028_445030a17b_o.jpg" alt="Code Snippets in MOTODEV Studio for Android" >
+			</p>
+			<p>
+				Once you've created a category, you can add individual snippets by right-clicking on the category name and choosing "New-&gt;New Item". With the new item, you can create the code template in the editing area at the bottom. After pressing "OK", you can access your new template from the Code Snippets view.
+			</p>
+			<p>
+				<img style="margin:0 10px 10px 10px;" src="/assets/images//blog/2009/08/03/Code-Snippets-in-MOTODEV-Studio-for-Android/3787037052_33520f4113.jpg" alt="Code Snippets in MOTODEV Studio for Android" >
+			</p>
+			<p>
+				If you have values that need to be entered by the user of your template, you can add them in the Variables editor on this screen. Simply create a new variable and provide a default value for the variable. When the code snippet is activated, the user is presented with a dialog asking for the value they wish to use. If they wish to use the default, they need only dismiss the dialog. If they wish to modify the values, they do so by modifying the values in the table at the top of the dialog and view them in the area below.
+			</p>
+			<p>
+				Code Snippets are only one of the cool new features that we've added to MOTODEV Studio and more new features are coming in the future. I hope that you will try our
+				<em>
+					product
+				</em>
+				and
+				<em>
+					give us feedback
+				</em>
+				on what works, what doesn't, and what could work better.
+			</p>
+			<p>
+				Enjoy!
+			</p>
+			<p>
+				Eric Cloninger (
+				<a href="http://twitter.com/ericc" target="_blank" rel="nofollow">
+					@ericc on Twitter
+				</a>
+				)
+			</p>
+			<p>
+				Sr. Product Manager<br>MOTODEV Studio<br>
+			</p>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/blog/1999/11/01/From-The-Factory-Floor-November-1999.html" data-toggle="tooltip" data-placement="top" title="From The Factory Floor November 1999">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/blog/2009/09/03/Whos-Speaking-at-the-MOTODEV-Summit.html" data-toggle="tooltip" data-placement="top" title="Whos Speaking at the MOTODEV Summit">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/ericc">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/ericcloninger">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/ehcloninger">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Eric Cloninger 2019</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-XXXXXXXXX-X');
+</script>
+
+
+
+</body>
+
+</html>

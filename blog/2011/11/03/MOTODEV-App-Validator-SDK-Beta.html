@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    MOTODEV App Validator SDK Beta - Eric Cloninger
+    
+  </title>
+
+  <meta name="description" content="Hello everyone, App quality is the result of many diligent practices, one of which is testing. I hope our users have taken advantage of the MOTODEV App Valid...">
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/blog/2011/11/03/MOTODEV-App-Validator-SDK-Beta.html">
+  <link rel="alternate" type="application/rss+xml" title="Eric Cloninger" href="/feed.xml">
+  <script src="https://kit.fontawesome.com/9c639a3d5e.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">Eric Cloninger</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/portfolio">Portfolio</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+  <header class="masthead">
+    
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>MOTODEV App Validator SDK Beta</h1>
+            
+            <span class="meta">Posted by
+              <a href="#">Eric Cloninger</a>
+              on November 03, 2011 &middot; <span class="reading-time" title="Estimated read time">
+  
+   4 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <p class="boxed">
+      		<strong>NOTE: </strong>This blog post was originally hosted on Motorola's MOTODEV web site. That site was decommissioned in 2012. I've made every attempt to preserve blog posts and accompanying forum posts with their original content. Many web links are no longer valid, so they have been removed and replaced with <em>emphasized</em> text.
+      	</p>
+      	<p>
+      		<strong>by Eric Cloninger (EricC)</strong>
+      	</p>
+
+        	<p>
+		Hello everyone,
+	</p>
+	<p>
+		App quality is the result of many diligent practices, one of which is testing. I hope our users have taken advantage of the MOTODEV App Validator. If not, I understand. Perhaps we've made it difficult to see, use, or understand. We're working to fix that and you will see improvements to usability in the future as well as training on how to use the tool inside MOTODEV Studio and on the command line.
+	</p>
+	<p>
+		The App Validator is more than just a testing tool, though. When we first created it, we knew that Android would be rapidly evolving the way it is now and we knew there would be many new conditions that would arise that needed to be detected. When new OS releases appear, we can write new checkers for the App Validator in about three days because the checkers use the same underlying technology that Eclipse plugins use.
+	</p>
+	<p>
+		Today, I'm pleased to announce the <em>App Validator Beta SDK</em> . With <a href="http://www.eclipse.org/downloads/packages/eclipse-classic-371/indigosr1" target="_blank" rel="nofollow">Eclipse Classic</a> , the <a href="http://developer.android.com/sdk/eclipse-adt.html" target="_blank" rel="nofollow">Android Development Tools</a> (ADT), and this SDK, you can write your own extensions to the MOTODEV App Validator to check Android applications. The App Validator framework provides the ability to decompose the Android app, enumerate resources, pull apart the app manifest, decompile Java code, and publish reports. Your plugin provides the specific business logic to detect the condition and raises exceptions. The framework handles the rest.
+	</p>
+	<p>
+		The App Validator runs as a command line tool as well as embedded into the IDE, so an extension built with this SDK will run in both environments. I suspect that most developers who create extensions will insert the tool into their build scripts as a last check before shipping, but I would love to see innovative and crazy things done that I didn't think of.
+	</p>
+	<p>
+		These are just some of the things you might do with the App Validator SDK:
+	</p>
+	<ul>
+		<li>Create a plugin to ensure that all the apps you build contain copyright strings in the exact format required by your company's Legal department (release engineering)</li>
+		<li>Scan an app to ensure that there are no calls to forbidden or dangerous APIs (IT department "blessing")</li>
+		<li>Ensure that small, medium, large, and extra-large layouts exist for every layout that ships or some subset based on rules (design team)</li>
+	</ul>
+	<p>
+		The skills needed to use this SDK are not only Java, but also Eclipse plugin development. The learning curve for Eclipse, just like any robust API set, is rather steep. The good news is that finding skilled Eclipse developers isn't terribly difficult. The installation guide, Javadocs, and the install .jar file are all available at the <em>MOTODEV Tools and Libraries site</em> . There are two sample plugins that are installed with the the .jar file that you can use to start your own development. The installation experience is typical for Eclipse users and is explained in detail in the <em>install guide</em> .
+	</p>
+	<p>
+		<img style="margin:0 10px 10px 10px;" src="/assets/images//blog/2011/11/03/MOTODEV-App-Validator-SDK-Beta/original(1).jpg" alt="Installing App Validator SDK into Eclipse Classic" title="Installing App Validator SDK into Eclipse Classic" align="middle">
+	</p>
+	<p>
+		The SDK is in beta form. We intend to spend some time taking feedback on our <em>discussion boards</em> , so if you use it, please let us know what we can improve in terms of the APIs, the API documentation, the user documentation, and the overall user experience.
+	</p>
+	<p>
+		Thanks again for using MOTODEV and good luck with your development!
+	</p>
+	<p>
+		Eric
+	</p>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/blog/2011/09/22/The-updated-MOTODEV-App-Validator.html" data-toggle="tooltip" data-placement="top" title="The updated MOTODEV App Validator">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/blog/2011/11/14/MOTODEV-Studio-3.0.2-update-is-now-available.html" data-toggle="tooltip" data-placement="top" title="MOTODEV Studio 3.0.2 update is now available">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/ericc">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/ericcloninger">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/ehcloninger">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Eric Cloninger 2019</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-XXXXXXXXX-X');
+</script>
+
+
+
+</body>
+
+</html>
